@@ -10,7 +10,7 @@ public class SistemaPrincipal {
         // O comando 'new' aloca memória para um novo objeto.
         // Criando o primeiro passageiro (Objeto 1)
         Passageiro passageiro1 = new Passageiro();
-        passageiro1.nome = "Twink Ariano";
+        passageiro1.nome = "Leonardo";
         passageiro1.saldo = 5000.0;
 
         // Criando o segundo passageiro (Objeto 2)

@@ -1,69 +1,23 @@
-<<<<<<< HEAD
 package br.com.fiapride.model;
 
 public class Carro {
-
-    // Atributos
-=======
-//package br.com.fiapride.model;
-//
-//public class Carro {
-//
-//    public String marca;
-//    public String motor;
-//    public int numeroDePortas;
-//    public int rpmMaximo;
-//    public int potenciaMotor;
-//
-//    // Keep your existing one
-//    public Carro(int rpmMaximo, int potenciaMotor) {
-//        this.rpmMaximo = rpmMaximo;
-//        this.potenciaMotor = potenciaMotor;
-//    }
-//
-//    // ADD THIS ONE:
-//    public Carro() {
-//        // This allows 'new Carro()' to work again!
-//    }
-//}
-package br.com.fiapride.model;
-
-public class Carro {
->>>>>>> 8b85b58b755abc671e6d7a8c4fc8ee3e3f054419
     public String marca;
     public String motor;
     public int numeroDePortas;
     public int rpmMaximo;
     public int potenciaMotor;
 
-<<<<<<< HEAD
-    // Construtor vazio
+    
     public Carro() {}
 
-    // Método de validação (Regra de Negócio)
+    
     public void validarDesempenho() {
-        // Regra ajustada: Só alerta se RPM for EXTREMO (> 7000) com baixa potência
-        // Assim, 6300 RPM com 112cv passa como normal.
         if (this.rpmMaximo > 7000 && this.potenciaMotor < 150) {
             System.out.println("--- AVISO [" + this.marca + "] ---");
             System.out.println("Alerta: RPM muito alto para o motor!");
         } else {
             System.out.println("--- INFO [" + this.marca + "] ---");
-            System.out.println("Motor operando normalmente (RPM: " + this.rpmMaximo + ", Potência: " + this.potenciaMotor + "cv).");
-=======
-    // The empty constructor to fix your previous error
-    public Carro() {}
-
-    // The method with your custom logic
-    public void validarDesempenho() {
-        // Example: If RPM is over 6000 but HP is under 120
-        if (this.rpmMaximo > 6000 && this.potenciaMotor < 120) {
-            System.out.println("--- AVISO [" + this.marca + "] ---");
-            System.out.println("Alerta: RPM alto (" + this.rpmMaximo + ") para baixa potência (" + this.potenciaMotor + "cv).");
-        } else {
-            System.out.println("--- INFO [" + this.marca + "] ---");
-            System.out.println("Desempenho dentro dos padrões esperados.");
->>>>>>> 8b85b58b755abc671e6d7a8c4fc8ee3e3f054419
+            System.out.println("Motor funcionando normalmente (RPM: " + this.rpmMaximo + ", Potência: " + this.potenciaMotor + "cv).");
         }
     }
 }

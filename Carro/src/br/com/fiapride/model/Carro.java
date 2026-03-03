@@ -3,14 +3,60 @@ package br.com.fiapride.model;
 public class Carro {
 
     // Atributos
-    public String marca;
-    public String motor;
-    public int numeroDePortas;
-    public int rpmMaximo;
-    public int potenciaMotor;
+    private String marca;
+    private String motor;
+    private int numeroDePortas;
+    private int rpmMaximo;
+    private int potenciaMotor;
 
     // Construtor vazio
     public Carro() {}
+
+    // Construtor que recebe a marca como argumento
+    public Carro(String marca) {
+        this.marca = marca;
+    }
+
+    // getters e setters
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getMotor() {
+        return motor;
+    }
+
+    public void setMotor(String motor) {
+        this.motor = motor;
+    }
+
+    public int getNumeroDePortas() {
+        return numeroDePortas;
+    }
+
+    public void setNumeroDePortas(int numeroDePortas) {
+        this.numeroDePortas = numeroDePortas;
+    }
+
+    public int getRpmMaximo() {
+        return rpmMaximo;
+    }
+
+    public void setRpmMaximo(int rpmMaximo) {
+        this.rpmMaximo = rpmMaximo;
+    }
+
+    public int getPotenciaMotor() {
+        return potenciaMotor;
+    }
+
+    public void setPotenciaMotor(int potenciaMotor) {
+        this.potenciaMotor = potenciaMotor;
+    }
 
     // Método de validação (Regra de Negócio)
     public void validarDesempenho() {

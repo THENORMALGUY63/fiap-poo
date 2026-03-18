@@ -3,16 +3,14 @@ import br.com.fiapride.model.Carro;
 public class Main {
     public static void main(String[] args) {
         
-        // Primeira Instância (Volkswagen)
-        Carro meuCarro = new Carro("Volkswagen");
-        meuCarro.setMotor("4 Cilindros Boxer");
+       
+        Carro meuCarro = new Carro("Volkswagen", "4 Cilindros Boxer");
         meuCarro.setNumeroDePortas(3);
         meuCarro.setPotenciaMotor(65);
         meuCarro.setRpmMaximo(4600);
 
-        // Segunda Instância (Chevrolet)
-        Carro felipeCarro = new Carro("Chevrolet");
-        felipeCarro.setMotor("4 Cilindros em linha");
+        
+        Carro felipeCarro = new Carro("Chevrolet", "4 Cilindros em linha");
         felipeCarro.setNumeroDePortas(5);
         felipeCarro.setPotenciaMotor(112);
         felipeCarro.setRpmMaximo(6300);

@@ -2,22 +2,25 @@ package br.com.fiapride.model;
 
 public class Carro {
 
-    // Atributos
     private String marca;
     private String motor;
     private int numeroDePortas;
     private int rpmMaximo;
     private int potenciaMotor;
 
-    // Construtor vazio
+    
     public Carro() {}
 
-    // Construtor que recebe a marca como argumento
     public Carro(String marca) {
         this.marca = marca;
     }
 
-    // getters e setters
+    public Carro(String marca, String motor) {
+        this.marca = marca;
+        this.motor = motor;
+    }
+
+    
     public String getMarca() {
         return marca;
     }
@@ -58,10 +61,9 @@ public class Carro {
         this.potenciaMotor = potenciaMotor;
     }
 
-    // Método de validação (Regra de Negócio)
+    
     public void validarDesempenho() {
-        // Regra ajustada: Só alerta se RPM for EXTREMO (> 7000) com baixa potência
-        // Assim, 6300 RPM com 112cv passa como normal.
+        
         if (this.rpmMaximo > 7000 && this.potenciaMotor < 150) {
             System.out.println("--- AVISO [" + this.marca + "] ---");
             System.out.println("Alerta: Rotação perigosamente alta para este motor!");
